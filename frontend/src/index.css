@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* color-scheme must track our .dark class, not the OS preference — otherwise
+   native controls (select dropdowns, date pickers) render using whatever the
+   OS prefers, independent of our app's actual theme, causing mismatches like
+   a white select popup inside an otherwise dark UI. */
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 transition-colors;
+}
+
+/* Native <select> popups inherit body colors on Chromium/Firefox once
+   color-scheme is set correctly above, but we still explicitly style the
+   select trigger itself so light/dark match app chrome exactly. */
+select option {
+  @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+}
