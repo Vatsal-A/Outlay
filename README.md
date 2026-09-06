@@ -137,10 +137,3 @@ default set of categories (Groceries, Rent, Transport, etc.) automatically.
 - [ ] Per-wallet analytics filtering on the dashboard
 - [ ] Export monthly report as PDF/CSV
 
-## Resume bullet ideas (once deployed)
-
-- Built a full-stack multi-account expense tracker with PostgreSQL aggregation
-  queries powering category analytics and a custom algorithm to auto-detect
-  recurring transactions from spending patterns.
-- Implemented JWT-based auth with hashed refresh-token rotation, rate-limited
-  endpoints, and centralized error handling; deployed on Render + Vercel.
