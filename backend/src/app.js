@@ -14,6 +14,7 @@ import { errorHandler, notFoundHandler } from './middleware/errorHandler.js';
 dotenv.config();
 
 export const app = express();
+app.set('trust proxy', 1);
 
 app.use(helmet());
 app.use(
